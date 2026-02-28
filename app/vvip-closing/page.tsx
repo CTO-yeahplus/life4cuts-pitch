@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { 
   ChevronDown, CameraOff, Flame, Zap, TrendingUp, Lock, ShieldCheck, Target, PenTool, Users, MapPin
 } from 'lucide-react';
+import OfficialHeader from '@/components/OfficialHeader';
 
 const VVIP_SLIDES = [
   // Slide 1: 패러다임 시프트
@@ -320,7 +321,10 @@ const VVIP_SLIDES = [
 export default function VvipPitchDeck() {
   return (
     <div className="h-screen w-full bg-[#050505] text-white overflow-y-scroll snap-y snap-mandatory scroll-smooth font-sans selection:bg-pink-500/30 break-keep">
-      
+      {/* 2. return 안의 최상단 div 바로 아래에 헤더 삽입! 👇 */}
+      <OfficialHeader /> 
+
+      {/* --- Intro Slide --- */}
       {/* --- Intro Slide (표지) --- */}
       <section className="h-screen w-full snap-start flex flex-col items-center justify-center relative px-6 text-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800/20 via-[#050505] to-[#050505] z-0" />
