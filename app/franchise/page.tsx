@@ -3,10 +3,11 @@
 import React, { useState } from 'react'; // 👈 useState 추가
 import { motion } from 'framer-motion';
 import { 
-  ChevronDown, Store, Sparkles, Gift, Smartphone, TrendingUp, Handshake, ArrowRightCircle, CheckCircle2
+  ChevronDown, Store, Sparkles, LayoutTemplate, Gift, Smartphone, Layout, TrendingUp, Handshake, ArrowRightCircle, CheckCircle2
 } from 'lucide-react';
 import FranchiseReservationModal from '@/components/FranchiseReservationModal';
 import OfficialHeader from '@/components/OfficialHeader';
+import { MdLineupContent, StoreLayoutContent } from '@/components/StandardGuideContent';
 
 const FRANCHISE_SLIDES = [
   // Slide 1: 현재 진단 및 돌파구
@@ -74,8 +75,25 @@ const FRANCHISE_SLIDES = [
       </div>
     )
   },
+  // 🟢 첫 번째 슬라이드: MD 라인업
+  {
+    id: "md-lineup",
+    icon: <Sparkles className="w-12 h-12 text-pink-500 mb-6" />,
+    title: "MD 구성 황금 라인업",
+    subtitle: "Golden Product Mix",
+    content: <MdLineupContent /> 
+  },
 
-  // Slide 3: 본사 지원 및 비용 구조
+  // 🟢 두 번째 슬라이드: 면적별 스탠다드
+  {
+    id: "store-layout",
+    icon: <LayoutTemplate className="w-12 h-12 text-yellow-500 mb-6" />,
+    title: "면적별 최적화 스탠다드",
+    subtitle: "Standardized Store Layout",
+    content: <StoreLayoutContent /> 
+  },
+
+  // Slide 4: 본사 지원 및 비용 구조
   {
     id: "03",
     icon: <Gift className="w-12 h-12 text-blue-500 mb-6" />,
@@ -208,7 +226,6 @@ export default function FranchisePitchDeck() {
       {/* 2. return 안의 최상단 div 바로 아래에 헤더 삽입! 👇 */}
       <OfficialHeader /> 
 
-      {/* --- Intro Slide --- */}
       {/* --- Intro Slide (표지) --- */}
       <section className="h-screen w-full snap-start flex flex-col items-center justify-center relative px-6 text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0A0A] to-[#111] z-0" />

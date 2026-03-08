@@ -3,10 +3,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  ChevronDown, CameraOff, Flame, Zap, TrendingUp, Lock, ShieldCheck, Target, PenTool, Users, MapPin
+  ChevronDown, CameraOff, Sparkles, LayoutTemplate, Flame, Zap, Store, TrendingUp, Lock, ShieldCheck, Target, PenTool, Users, MapPin
 } from 'lucide-react';
 import OfficialHeader from '@/components/OfficialHeader';
-
+import { MdLineupContent, StoreLayoutContent } from '@/components/StandardGuideContent';
 const VVIP_SLIDES = [
   // Slide 1: 패러다임 시프트
   {
@@ -150,6 +150,7 @@ const VVIP_SLIDES = [
     )
   },
 
+
   // Slide 4: 인천/홍대 데이터 (공간 효율화 복제) - [NEW 추가 슬라이드]
   {
     id: "04",
@@ -232,6 +233,26 @@ const VVIP_SLIDES = [
       </div>
     )
   },
+
+
+  // 🟢 첫 번째 슬라이드: MD 라인업
+  {
+    id: "md-lineup",
+    icon: <Sparkles className="w-12 h-12 text-pink-500 mb-6" />,
+    title: "MD 구성 황금 라인업",
+    subtitle: "Golden Product Mix",
+    content: <MdLineupContent /> 
+  },
+
+  // 🟢 두 번째 슬라이드: 면적별 스탠다드
+  {
+    id: "store-layout",
+    icon: <LayoutTemplate className="w-12 h-12 text-yellow-500 mb-6" />,
+    title: "면적별 최적화 스탠다드",
+    subtitle: "Standardized Store Layout",
+    content: <StoreLayoutContent /> 
+  },
+
 
   // Slide 5: 타 상권 데이터 (제주 등)
   {
