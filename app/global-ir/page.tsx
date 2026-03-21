@@ -307,18 +307,13 @@ const GLOBAL_SLIDES = [
           </div>
         </div>
 
-        {/* 🎙️ 하단: VC 대상 스피커 노트 (가로형 와이드 패널) */}
-        <div className="mt-6 p-6 md:p-8 bg-gradient-to-r from-blue-900/40 via-cyan-900/30 to-transparent border-l-4 border-cyan-400 rounded-2xl shadow-xl relative overflow-hidden">
-          <strong className="text-cyan-300 block mb-4 text-xl tracking-wide flex items-center gap-2 relative z-10">
-            <Sparkles className="w-6 h-6"/> Core Value
-          </strong>
-          <div className="leading-relaxed text-base md:text-lg break-keep space-y-4 text-cyan-50 relative z-10">
-            <p>C2E 생태계에서는 물리적 국경이 존재하지 않습니다.</p>
-            
-            <p>브라질에 사는 10대 소녀가 방구석에서 트렌디한 프레임을 디자인해 올리면, 서울과 도쿄의 수많은 고객들이 그 프레임을 1,000원에 사서 매장에서 출력합니다.</p>
-            
-            <p className="text-white font-bold mt-2 pt-4 border-t border-cyan-500/30">
-              즉, 매장이 없는 160개국은 전 세계에 프레임을 수출하는 '글로벌 디자인 스튜디오'가 되고, 매장이 있는 30개국은 그들의 작품을 소비하는 '출력소'가 됩니다. 이것이 전 세계 1020 여성들을 하나로 묶어내는 진정한 글로벌 플랫폼입니다.
+        {/* 🎙️ VC 대상 스피커 노트 */}
+        <div className="bg-gradient-to-r from-blue-900/40 to-transparent p-6 rounded-2xl border border-blue-500/30 flex items-start gap-4">
+          <Sparkles className="w-8 h-8 text-blue-400 flex-shrink-0" />
+          <div>
+            <h4 className="text-white font-bold text-xl mb-2">The Killer Metric: 물리적 국경 없음</h4>
+            <p className="text-sm text-blue-200">
+            C2E 생태계에서는  <strong className="text-pink-400">물리적 국경이 존재하지 않습니다.</strong> <br/> 브라질에 사는 10대 소녀가 방구석에서 트렌디한 프레임을 디자인해 올리면, 서울과 도쿄의 수많은 고객들이 그 프레임을 1,000원에 사서 매장에서 출력합니다.즉, 매장이 없는 160개국은 전 세계에 프레임을 수출하는 '글로벌 디자인 스튜디오'가 되고, 매장이 있는 30개국은 그들의 작품을 소비하는 '출력소'가 됩니다. 이것이 전 세계 1020 여성들을 하나로 묶어내는 진정한 글로벌 플랫폼입니다.
             </p>
           </div>
         </div>
@@ -481,10 +476,14 @@ const GLOBAL_SLIDES = [
         </div>
 
         {/* 🎙️ VC 대상 스피커 노트 */}
-        <div className="mt-4 p-5 bg-gradient-to-r from-blue-900/40 to-cyan-900/40 border-l-4 border-cyan-400 rounded-r-2xl text-base text-cyan-50">
-          <strong className="text-cyan-300 block mb-2">Core Value</strong>
-          유저 한 명을 데려오기 위해 구글이나 메타에 광고비를 태울 필요가 없습니다(Zero CAC). 
-          이미 전국과 해외 매장에서 매월 392만 명이 자기 발로 저희 모바일 웹(QR)에 들어옵니다. 이 거대한 트래픽 중 단 5~10%만 전환시켜도 첫해 연 매출 300억, 영업이익률 80%가 달성됩니다.
+        <div className="bg-gradient-to-r from-blue-900/40 to-transparent p-6 rounded-2xl border border-blue-500/30 flex items-start gap-4">
+          <Sparkles className="w-8 h-8 text-blue-400 flex-shrink-0" />
+          <div>
+            <h4 className="text-white font-bold text-xl mb-2">The Killer Metric: Zero CAC</h4>
+            <p className="text-sm text-blue-200">
+            유저 한 명을 데려오기 위해 <strong className="text-pink-400"> 구글이나 메타에 광고비를 태울 필요가 없습니다(Zero CAC)</strong> <br/> 이미 전국과 해외 매장에서 매월 392만 명이 자기 발로 저희 모바일 웹(QR)에 들어옵니다. 이 거대한 트래픽 중 단 5~10%만 전환시켜도 첫해 연 매출 300억, 영업이익률 80%가 달성됩니다.
+            </p>
+          </div>
         </div>
       </div>
     )
@@ -567,21 +566,12 @@ const GLOBAL_SLIDES = [
         </div>
 
         {/* 🎙️ 하단: VC 대상 스피커 노트 (가로형 와이드 패널) */}
-        <div className="mt-6 p-6 md:p-8 bg-gradient-to-r from-green-900/30 via-blue-900/20 to-transparent border-l-4 border-green-500 rounded-2xl shadow-xl relative overflow-hidden">
-          {/* 배경 워터마크 아이콘 */}
-          <div className="absolute top-0 right-10 text-green-500/10 -translate-y-1/4 pointer-events-none">
-            <TrendingUp className="w-48 h-48" />
-          </div>
-          <strong className="text-green-400 block mb-4 text-xl tracking-wide flex items-center gap-2 relative z-10">
-            <Sparkles className="w-6 h-6"/> Core Value
-          </strong>
-          <div className="leading-relaxed text-base md:text-lg break-keep space-y-3 text-green-50 relative z-10">
-            <p>런칭 첫 달부터 392만 명이 모두 결제하진 않을 것입니다. 초기엔 기능의 안정화와 코어 팬덤의 점진적 유입에 집중합니다.</p>
-            
-            <p>그리고 <strong>26년 2분기(5월말), 무료 다운로드와 구독제에 과금이 도입되는 순간</strong>, 트래픽은 반 강제적으로 결제와 구독으로 전환되며 1차 J커브를 그립니다.</p>
-            
-            <p className="text-white font-bold mt-4 pt-4 border-t border-green-500/30">
-              이후 Phase 3 26년 3분기(8월) 크리에이터 생태계(C2E)가 열리면, 그때부터는 오프라인 매장이 없는 국가의 유저들까지 생산자와 소비자로 유입됩니다. 오프라인 트래픽의 한계선(392만)을 뚫고 무한 확장하는 진정한 글로벌 스케일업이 완성됩니다.
+=        <div className="bg-gradient-to-r from-blue-900/40 to-transparent p-6 rounded-2xl border border-blue-500/30 flex items-start gap-4">
+          <Sparkles className="w-8 h-8 text-blue-400 flex-shrink-0" />
+          <div>
+            <h4 className="text-white font-bold text-xl mb-2">The Killer Metric: Zero CAC</h4>
+            <p className="text-sm text-blue-200">
+            런칭 첫 달부터 392만 명이 모두 결제하진 않을 것입니다. 초기엔 기능의 안정화와 코어 팬덤의 점진적 유입에 집중합니다. <strong className="text-pink-400"> 26년 2분기(5월말), 무료 다운로드와 구독제에 과금이 도입되는 순간</strong> 트래픽은 반 강제적으로 결제와 구독으로 전환되며 1차 J커브를 그립니다. <br/>이후 Phase 3 - 26년 3분기(8월) 크리에이터 생태계(C2E)가 열리면, 그때부터는 오프라인 매장이 없는 국가의 유저들까지 생산자와 소비자로 유입됩니다. 오프라인 트래픽의 한계선(392만)을 뚫고 무한 확장하는 진정한 글로벌 스케일업이 완성됩니다.
             </p>
           </div>
         </div>
