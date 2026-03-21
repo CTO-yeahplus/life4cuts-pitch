@@ -88,12 +88,12 @@ export default function VipReservationModal({ isOpen, onClose }: VipReservationM
                       <option value="" disabled>투자 규모를 선택해주세요</option>
                       <option value="2억~3억">2억 ~ 3억 원</option>
                       <option value="3억~5억">3억 ~ 5억 원</option>
-                      <option value="5억 이상">5억 원 이상 (다점포)</option>
+                      <option value="5억 이상">5억 원 이상</option>
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-bold text-gray-300 mb-2">관심 지역 (선택)</label>
-                    <input type="text" name="region" value={formData.region} onChange={handleChange} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-yellow-500 transition-colors" placeholder="예: 강남구, 홍대 등" />
+                    <label className="block text-sm font-bold text-gray-300 mb-2">관심 분야 (선택)</label>
+                    <input type="text" name="region" value={formData.region} onChange={handleChange} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-yellow-500 transition-colors" placeholder="매장 또는 글로벌 앱" />
                   </div>
 
                   <button type="submit" disabled={isSubmitting} className={`w-full py-4 rounded-xl font-bold text-lg transition-all mt-4 flex items-center justify-center gap-2 ${isSubmitting ? 'bg-gray-600 text-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-yellow-500 to-pink-500 text-white hover:opacity-90'}`}>
