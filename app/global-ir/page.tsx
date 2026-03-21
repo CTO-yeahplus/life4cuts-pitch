@@ -112,7 +112,7 @@ const GLOBAL_SLIDES = [
             <h4 className="text-xl font-bold text-white mb-1">Basic <span className="text-sm font-normal text-green-400">(Fan)</span></h4>
             <div className="text-3xl font-black text-green-400 mb-4">₩ 4,900<span className="text-sm font-normal text-gray-400">/월</span></div>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>• 스토리지 10GB(약 1,000회 촬영)</li>
+              <li>• 스토리지 10GB(약 1,000회 촬영분)</li>
               <li className="font-bold text-pink-400">• 매월 K-Pop 한정판 프레임 1종 무료 (가치 증명)</li>
               <li>• 나만프 촬영권 8개</li>
             </ul>
@@ -122,7 +122,7 @@ const GLOBAL_SLIDES = [
             <h4 className="text-xl font-bold text-white mb-1">Pro <span className="text-sm font-normal text-gray-500">(Creator)</span></h4>
             <div className="text-2xl font-black text-gray-300 mb-4">₩ 9,900<span className="text-sm font-normal text-gray-500">/월</span></div>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>• 스토리지 50GB(약 5,000회 촬영)</li>
+              <li>• 스토리지 50GB(약 5,000회 촬영분)</li>
               <li className="text-white">• 프레임 커뮤니티 판매 권한</li>
               
             </ul>
