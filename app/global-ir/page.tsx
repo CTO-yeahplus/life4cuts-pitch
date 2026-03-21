@@ -85,7 +85,7 @@ const GLOBAL_SLIDES = [
   {
     id: "03",
     icon: <Wallet className="w-12 h-12 text-green-500 mb-6" />,
-    title: "강력한 Tollgate와 팬덤 멤버십",
+    title: "강력한 Tollgate 과금전략과 팬덤 멤버십",
     subtitle: "Business Model 1: Subscription Lock-in",
     content: (
       <div className="space-y-8 text-lg text-gray-300">
@@ -369,7 +369,7 @@ const GLOBAL_SLIDES = [
               <Brush className="w-5 h-5"/> Track 1. 생산자 타겟 (C2E)
             </h4>
             <p className="text-sm text-gray-400 leading-relaxed bg-white/5 p-4 rounded-xl border border-white/5">
-              매장이 없어도 상관없습니다. 디자인 감각이 있는 유저들은 방구석에서 프레임을 만들어 <strong>전 세계 오프라인 매장에 '수출'</strong>하며 돈을 법니다. 감성과 퀄리티만으로 승부하는 무역 생태계입니다.
+              매장이 없어도 상관없습니다. 디자인 감각이 있는 유저들은 방구석에서 프레임을 만들어 <strong className="text-cyan-400">전 세계 오프라인 매장에 '수출'</strong>하며 돈을 법니다. 감성과 퀄리티만으로 승부하는 무역 생태계입니다.
             </p>
           </div>
 
@@ -418,7 +418,7 @@ const GLOBAL_SLIDES = [
           <div className="relative">
             <div className="absolute -left-[35px] top-1 w-4 h-4 rounded-full bg-yellow-500 border-4 border-[#0a0a0a]" />
             <h4 className="text-xl font-bold text-yellow-400 mb-1">Phase 2. 26년 2Q (5월 말)</h4>
-            <p className="text-sm text-gray-300">글로벌 결제 모듈 연동, QR 원본 다운로드 과금(Tollgate) 오픈, 클라우드 스토리지 구독제 도입. <strong className="text-white">(수익화 랠리 시작)</strong></p>
+            <p className="text-sm text-gray-300">글로벌 결제 모듈 연동, QR 원본 다운로드 과금(Tollgate전략) 오픈, 클라우드 스토리지 구독제 도입. <strong className="text-white">(수익화 랠리 시작)</strong></p>
           </div>
           <div className="relative">
             <div className="absolute -left-[35px] top-1 w-4 h-4 rounded-full bg-pink-500 border-4 border-[#0a0a0a]" />
