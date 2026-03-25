@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  ChevronDown, Globe2, CloudLightning, Wallet, Sparkles, 
-  Rocket, Code2, BarChart4, Target, ArrowRightCircle, CheckCircle2,
-  RefreshCcw, Smartphone, Store, ArrowRight, Map, TrendingUp
+  ChevronDown, Globe2, CloudLightning, Wallet, Sparkles, PieChart,
+  Rocket, Code2, BarChart4, Target, ArrowRightCircle, CheckCircle2,Calculator,
+  RefreshCcw, Smartphone, Store, ArrowRight, Map, TrendingUp, Users, Zap, Award
 } from 'lucide-react';
 import OfficialHeader from '@/components/OfficialHeader';
 import VipReservationModal from '@/components/VipReservationModal'; // 예약 모달 재사용
@@ -127,6 +127,149 @@ const GLOBAL_SLIDES = [
               
             </ul>
             <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-500">크리에이터 및 O2O 헤비 유저 타겟</div>
+          </div>
+        </div>
+      </div>
+    )
+  },
+
+  // 3-2. (신규) 나만의 프레임 상세
+  {
+    id: "03-2",
+    icon: <Brush className="w-12 h-12 text-pink-500 mb-6" />,
+    title: "방구석이 포토 부스로, '나만의 프레임'",
+    subtitle: "Namaenf: Live Filter & Custom Design",
+    content: (
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center text-lg text-gray-300">
+        <div className="space-y-6">
+          <p>앱 카메라로 사진 필터를 라이브로 적용하고, 자신만의 고유한 프레임 디자인을 입혀 즉석에서 포토 굿즈를 만듭니다.</p>
+          <div className="p-6 bg-[#111] rounded-3xl border border-white/10 space-y-4">
+            <h4 className="text-white font-bold text-xl mb-3 flex items-center gap-2"><Sparkles className="w-5 h-5 text-yellow-500"/> 핵심 기능</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex gap-2 items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 shrink-0"/><span><strong>라이브 AR 필터:</strong> K-Beauty, 뽀샤시 등 인생네컷 화질 인앱 구현</span>
+              </li>
+              <li className="flex gap-2 items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 shrink-0"/><span><strong>무한대 커스텀 디자인:</strong> 스티커, 텍스트, 그리기 도구로 프레임 제작</span>
+              </li>
+              <li className="flex gap-2 items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 shrink-0"/><span><strong>누구나 무한 제작 (Free):</strong> 디자인은 무료, 무제한</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        {/* 과금 전략 시각화 */}
+        <div className="relative w-full bg-[#111] p-8 rounded-[2rem] border border-pink-500/30 shadow-[0_0_50px_rgba(236,72,153,0.1)] overflow-hidden text-center">
+            <div className="absolute top-0 left-0 bg-pink-500 text-white text-[10px] font-black px-4 py-1.5 rounded-br-xl uppercase tracking-widest">Monetization</div>
+            <Smartphone className="w-16 h-16 text-white mx-auto mb-6 mt-4" />
+            <h3 className="text-2xl font-black text-white mb-3">제작은 무료, 촬영은 유료</h3>
+            <p className="text-sm text-gray-400 mb-6 break-keep">매장 기기에서 사진을 출력하려면<br/> 반드시 <strong>'매장 촬영권'</strong>이 포함된 유료 요금제(Basic 이상)를 구독해야 합니다.</p>
+            <div className="inline-block px-6 py-3 rounded-full bg-pink-600 text-white font-black text-xl shadow-lg">
+                월 ₩ 1,900<span className="text-xs font-normal"> (구독형 촬영권)</span>
+            </div>
+            <p className="text-[10px] text-gray-600 mt-3">*타사 원본 과금 대비 압도적 가격 경쟁력 & 멤버십 유입</p>
+        </div>
+      </div>
+    )
+  },
+
+  // 3-3. (신규) 1,900원 소액 구독 시뮬레이션
+  {
+    id: "03-3",
+    icon: <Calculator className="w-12 h-12 text-pink-500 mb-6" />,
+    title: "소액 구독의 마법: 월 1,900원의 파괴력",
+    subtitle: "Micro-Subscription Revenue Simulation",
+    content: (
+      <div className="space-y-6 text-lg text-gray-300 max-h-[75vh] overflow-y-auto pr-2 pb-10">
+        <p className="leading-relaxed">
+          월 1,900원의 구독료는 1020 세대에게 심리적 저항선이 없는 가격입니다. 디지털 티켓(촬영권)이므로 <strong className="text-white">한계 비용(Marginal Cost)이 '0'에 수렴하여 압도적인 85%의 순이익률</strong>을 달성합니다.
+        </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-4">
+          {/* 📊 좌측: 마진 구조 설명 */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="bg-[#111] border border-pink-500/30 p-6 rounded-3xl relative overflow-hidden h-full">
+              <h4 className="text-pink-400 font-bold mb-4 flex items-center gap-2">
+                <PieChart className="w-5 h-5"/> 1,900원 수익 구조 (OPM 85%)
+              </h4>
+              
+              <div className="space-y-4">
+                <div className="relative w-full h-8 bg-gray-800 rounded-full overflow-hidden flex text-xs font-bold text-center leading-8">
+                  <div className="w-[85%] bg-gradient-to-r from-pink-600 to-pink-400 text-white">순이익 85% (1,615원)</div>
+                  <div className="w-[15%] bg-gray-600 text-gray-300 border-l border-gray-800">15%</div>
+                </div>
+                
+                <ul className="space-y-3 text-sm text-gray-400 mt-4">
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-4 h-4 text-pink-500 mt-0.5 shrink-0"/>
+                    <div>
+                      <strong className="text-white">영업 이익 (85%):</strong> 실물 배송이나 원자재가 없는 100% 디지털 상품으로 압도적 마진 확보.
+                    </div>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <CheckCircle2 className="w-4 h-4 text-gray-500 mt-0.5 shrink-0"/>
+                    <div>
+                      <strong className="text-gray-300">고정 지출 (15%):</strong> 앱스토어/PG 결제 수수료 및 클라우드 트래픽 유지 비용.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 📈 우측: 전환율별 시뮬레이션 */}
+          <div className="lg:col-span-7 bg-[#111] p-6 rounded-3xl border border-white/10 shadow-[0_0_30px_rgba(236,72,153,0.1)]">
+            <h4 className="text-white font-bold mb-6 flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-pink-400"/> 오프라인 400만 트래픽 기반 전환 시뮬레이션
+            </h4>
+            
+            <div className="space-y-4">
+              {/* Scenario 1 */}
+              <div className="p-4 bg-white/5 rounded-2xl border border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <div className="text-gray-400 text-xs font-bold mb-1">보수적 시나리오 (전환율 5%)</div>
+                  <div className="text-white font-black text-lg">200,000 명 가입</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-pink-400 font-bold">월 매출: 3.8억 원</div>
+                  <div className="text-xs text-gray-500 mt-1">월 순이익: 3.2억 원 (연 38억)</div>
+                </div>
+              </div>
+
+              {/* Scenario 2 (Target) */}
+              <div className="p-4 bg-gradient-to-r from-pink-900/40 to-transparent rounded-2xl border border-pink-500/50 flex flex-col md:flex-row md:items-center justify-between gap-4 scale-105 shadow-lg relative my-2">
+                <div className="absolute -top-3 left-4 bg-pink-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase">Target</div>
+                <div>
+                  <div className="text-pink-200 text-xs font-bold mb-1">목표 시나리오 (전환율 10%)</div>
+                  <div className="text-white font-black text-xl">400,000 명 가입</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-pink-400 font-bold text-xl">월 매출: 7.6억 원</div>
+                  <div className="text-xs text-pink-200/70 mt-1">월 순이익: 6.4억 원 <strong className="text-white">(연 77억)</strong></div>
+                </div>
+              </div>
+
+              {/* Scenario 3 */}
+              <div className="p-4 bg-white/5 rounded-2xl border border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <div className="text-gray-400 text-xs font-bold mb-1">낙관적 시나리오 (전환율 20%)</div>
+                  <div className="text-white font-black text-lg">800,000 명 가입</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-pink-400 font-bold">월 매출: 15.2억 원</div>
+                  <div className="text-xs text-gray-500 mt-1">월 순이익: 12.9억 원 (연 155억)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-900/40 to-transparent p-6 rounded-2xl border border-blue-500/30 flex items-start gap-4">
+          <Sparkles className="w-8 h-8 text-blue-400 flex-shrink-0" />
+          <div>
+            <h4 className="text-white font-bold text-xl mb-2">The Killer Metric: QR 접속률 98%</h4>
+            <p className="text-sm text-blue-200">
+             <strong className="text-pink-400">1,900원으로 돈이 되나?</strong>라고 생각하실 수 있습니다. 하지만 이 구독권은 배송비도, 원자재 값도 들지 않는 100% 디지털 상품입니다. 수수료를 떼고도 85%가 순이익으로 남습니다.
+             커피 반 잔 값인 1,900원은 1020 여성들에게 심리적 저항선이 전혀 없는 가격입니다. 매월 우리 매장을 방문하는 400만 명 중 단 10%만 이 멤버십에 가입해도, <strong>아무런 마케팅 비용 없이 연 77억 원의 순수 현금(Net Profit)이 매년 통장에 꽂히게 됩니다.</strong>
+            </p>
           </div>
         </div>
       </div>
@@ -396,6 +539,56 @@ const GLOBAL_SLIDES = [
     )
   },
 
+  // 5-3. (신규 - 아이디어 반영) 사진 중심의 새로운 놀거리: AR 포즈 챌린지
+  {
+    id: "05-3",
+    icon: <Zap className="w-12 h-12 text-yellow-500 mb-6" />,
+    title: "방구석 글로벌 랭킹전, 'AR 포즈 챌린지'",
+    subtitle: "New Play: Photo-centric AI Battle",
+    content: (
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-lg text-gray-300 max-h-[75vh] overflow-y-auto pr-2 pb-10">
+        <div className="md:col-span-7 space-y-6">
+          <p>매장이 없는 곳에서도 폰 하나로 글로벌 K-Pop 팬덤이 모여 놉니다.<br/> <strong className="text-white">AI가 점수를 매기는 AR 포즈 랭킹전</strong>으로 앱의 체류 시간을 폭발적으로 늘립니다.</p>
+          
+          <div className="p-6 bg-[#111] rounded-3xl border border-white/10 space-y-4">
+            <h4 className="text-white font-bold text-xl mb-3 flex items-center gap-2"><Award className="w-5 h-5 text-yellow-500"/> 게임 방식 & 효과</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex gap-2 items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 shrink-0"/><span><strong>AI 포즈 분석:</strong> 카메라 속 아이돌 실루엣 가이드를 얼마나 똑같이 따라 했는지 AI가 실시간 평가 및 랭킹 산출</span>
+              </li>
+              <li className="flex gap-2 items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 shrink-0"/><span><strong>글로벌 챌린지:</strong> 방탄소년단 'Dynamite' 포즈 챌린지 등 무국적 글로벌 팬덤 대결</span>
+              </li>
+              <li className="flex gap-2 items-start"><CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 shrink-0"/><span><strong>체류 시간 & DAU 폭발:</strong> 프레임 제작 능력과 무관한 전 유저 대상 강력한 '놀거리'</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        {/* 시각화 - 랭킹 보드 느낌 */}
+        <div className="md:col-span-5 relative bg-[#111] p-6 rounded-[2rem] border border-white/10 shadow-lg text-center font-sans">
+          <div className="inline-block px-3 py-1 bg-yellow-500 text-black text-[10px] font-black rounded-full uppercase tracking-widest mb-4">Challenge Global Rank</div>
+          <div className="space-y-2.5">
+            <div className="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-yellow-500/50">
+                <span className="text-2xl font-black text-yellow-400 w-10">1</span>
+                <span className="text-white font-bold flex-1 text-left px-2">K-Girl_Rio 🇧🇷</span>
+                <span className="text-yellow-500 font-bold">98.5 <span className="text-xs text-gray-600">pts</span></span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-white/5">
+                <span className="text-xl font-bold text-gray-400 w-10">2</span>
+                <span className="text-gray-300 flex-1 text-left px-2">Seoul_Minji 🇰🇷</span>
+                <span className="text-gray-500 font-bold">96.1 <span className="text-xs text-gray-600">pts</span></span>
+            </div>
+            <div className="flex justify-between items-center p-3 bg-white/5 rounded-xl border border-white/5 opacity-80">
+                <span className="text-xl font-bold text-gray-400 w-10">3</span>
+                <span className="text-gray-300 flex-1 text-left px-2">Fan_Jenny 🇻🇳</span>
+                <span className="text-gray-500 font-bold">94.8 <span className="text-xs text-gray-600">pts</span></span>
+            </div>
+            <div className="text-[10px] text-gray-600 animate-pulse mt-4">• • • 글로벌 챌린지 실시간 업데이트 중</div>
+          </div>
+        </div>
+      </div>
+    )
+  },
+
   // 6. 기술 로드맵
   {
     id: "06",
@@ -425,6 +618,11 @@ const GLOBAL_SLIDES = [
             <h4 className="text-xl font-bold text-pink-400 mb-1">Phase 3. 26년 3Q (8월)</h4>
             <p className="text-sm text-gray-300">글로벌 소셜 커뮤니티 및 C2E 크리에이터 스토어 정식 오픈. <strong className="text-white">(플랫폼 생태계 완성)</strong></p>
           </div>
+          <div className="relative">
+            <div className="absolute -left-[35px] top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#0a0a0a]" />
+            <h4 className="text-xl font-bold text-blue-400 mb-1">Phase 4. 26년 4Q (10월)</h4>
+            <p className="text-sm text-gray-300">AR 포즈 챌린지 <strong className="text-white">(글로벌 K-Pop 팬덤, 체류 시간 & DAU 폭발)</strong></p>
+          </div>
         </div>
       </div>
     )
@@ -438,7 +636,7 @@ const GLOBAL_SLIDES = [
     subtitle: "Financial Projections (Monthly Base)",
     content: (
       <div className="space-y-6 text-lg text-gray-300">
-        <p className="text-sm md:text-base mb-4">오프라인 QR 접속자(월 392만 명) 중 <strong className="text-white">'극히 보수적인 전환율(5~10%)</strong>만 적용하여 산출한 <strong className="text-white">'월간(Monthly) 앱 단일 매출'</strong> 시뮬레이션입니다.</p>
+        <p className="text-sm md:text-base mb-4">오프라인 QR 접속자(월 392만 명) 중 <strong className="text-white">'극히 보수적인 전환율(5~10%)'</strong>만 적용하여 산출한 <strong className="text-white">'월간(Monthly) 앱 단일 매출'</strong> 시뮬레이션입니다.</p>
         
         <div className="w-full bg-[#111] p-6 md:p-8 rounded-[2rem] border border-white/10 shadow-2xl">
           <div className="space-y-5">
@@ -447,6 +645,8 @@ const GLOBAL_SLIDES = [
               { label: "2. C2E 스토어 본사수수료 (구매 10%)", value: 5.4, color: "bg-purple-500" },
               { label: "3. 오프라인 17% IP/서버비 정산", value: 1.6, color: "bg-blue-500" },
               { label: "4. 멤버십 구독 MRR (전환 6%)", value: 13.4, color: "bg-green-500" },
+              // 💡 5번: 1,900원 소액 구독 항목 추가 완료
+              { label: "5. 촬영권 소액 구독 (전환 10%)", value: 7.6, color: "bg-pink-500" },
             ].map((item, idx) => (
               <div key={idx} className="relative">
                 <div className="flex justify-between text-sm font-bold text-gray-300 mb-2">
@@ -461,15 +661,16 @@ const GLOBAL_SLIDES = [
           </div>
 
           <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
+            {/* 💡 합산 매출/영업이익 자동 계산 적용 */}
             <div className="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
               <div className="text-xs text-gray-400 mb-1">앱 단일 월 총매출</div>
-              <div className="text-2xl font-black text-white">약 24.3억 원</div>
-              <div className="text-[10px] text-gray-500 mt-1">(연 환산 약 291억)</div>
+              <div className="text-2xl font-black text-white">약 31.9억 원</div>
+              <div className="text-[10px] text-gray-500 mt-1">(연 환산 약 382억)</div>
             </div>
             <div className="p-4 bg-gradient-to-br from-yellow-500/20 to-transparent rounded-xl border border-yellow-500/40 text-center relative overflow-hidden">
               <div className="absolute inset-0 bg-yellow-500/10 animate-pulse" />
-              <div className="text-xs text-yellow-400 font-bold mb-1 relative z-10">월 영업 이익 (OPM 80.2%)</div>
-              <div className="text-2xl font-black text-yellow-500 relative z-10">약 19.5억 원</div>
+              <div className="text-xs text-yellow-400 font-bold mb-1 relative z-10">월 영업 이익 (OPM 81.1%)</div>
+              <div className="text-2xl font-black text-yellow-500 relative z-10">약 25.9억 원</div>
               <div className="text-[10px] text-yellow-500/60 mt-1 relative z-10">(마케팅비 0원의 마법)</div>
             </div>
           </div>
@@ -578,6 +779,8 @@ const GLOBAL_SLIDES = [
       </div>
     )
   },
+
+  
 
   // 8. Vision & Ask (투자금액 150억으로 상향)
   {
